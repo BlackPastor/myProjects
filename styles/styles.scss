@@ -1,0 +1,789 @@
+//colors
+
+$black: #000000;
+$white: #ffffff;
+$base-bg: #e9e7ea;
+$secondary-bg: #dbc5ba;
+$primary-font: #50382c;
+
+// sizes
+
+$primary-padding:86px;
+
+$ui-xxs: 20px;
+$ui-xs: 24px;
+$ui-s: 36px;
+$ui-l: 48px;
+$ui-xl: 68px;
+
+// animations
+
+$transition: .4s;
+
+*{
+    margin: 0;
+    font-size: $ui-xs;
+    font-family: 'Anek Latin', sans-serif;
+    color: $primary-font;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.root{
+    
+    padding-top: 55px;  
+    background-color: $base-bg;
+}
+
+.header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    align-items: center;
+    padding: 0 $primary-padding;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 9;
+    background-color: $base-bg;
+    &_{
+        font-size: $ui-s;
+    }
+}
+.navigation{
+    display: flex;
+    ul{
+        display: flex;
+        margin-right: 130px;
+    }
+    &_link{
+        margin-right: 62px;
+        text-decoration: none;
+
+        &:last-child{
+            margin-right: 0;
+        }
+        a{
+            transition: $transition;
+            color: $primary-font;
+            text-decoration: none;
+        }
+        :hover{
+            font-weight: 700;
+            opacity: .9;
+        }
+    }
+    &_actions{ 
+        display: flex;
+        :first-child{
+            margin-right: 30px;
+        }
+        i{
+            color: $primary-font;
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            transition: $transition;
+            justify-content: center;
+            border-radius: 50%;
+
+            &:hover{
+                transform: scale(1.1);
+
+            }
+        }
+        :last-child:hover .dropdown_content{
+            display: block;
+        }
+        a:hover{
+            font-weight: 700;
+            opacity: .9;
+        }
+    }
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+
+    &_content{
+        display: none;
+        position: absolute;
+        background-color: $base-bg;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 8px;
+    }
+
+    a{
+        padding: 15px 20px;
+        text-decoration: none;
+        display: block;
+    }
+} 
+
+.dropbtn{
+        border: none;
+        background-color: $base-bg; 
+    }
+
+.home{
+    position: relative;
+    height: calc(100vh - 105px);
+    display: flex;
+    align-items: center;
+    padding-left: $primary-padding;
+    justify-content: space-between;
+
+    &_content{
+        flex-basis: 40%;
+        flex-shrink: 0;
+        h2{
+            font-size: $ui-l;
+            font-weight: bold;
+            margin-bottom: 74px;
+        } 
+
+        p{
+            line-height: 35px;
+        }
+    }
+    &_logo{
+        height: 100%;
+        img{ 
+            height: 100%;
+            width: auto;
+            }
+        }
+    
+}
+
+
+.about-us{
+    position: relative;
+    padding: 70px $primary-padding 0 $primary-padding;
+
+    &_title{
+        font-size: $ui-xl;
+        margin-bottom: 25px;
+    }
+
+    &_content{
+        display: flex;
+        justify-content: space-between;
+    }  
+    &_item{
+        width: 46%;
+        flex-shrink: 0;
+        
+      
+        p{
+                margin-bottom: 25px;
+            }
+        &:first-child{
+          img{
+            max-width: 100%;
+            height: 820px;
+        }
+            button{
+                margin-bottom: 70px;
+            }
+            
+        }
+        &:last-child{
+
+            img{
+                height: 750px;
+                max-width: 100%;
+                margin-bottom: 38px;
+            }
+        }
+    }
+} 
+.btn{
+     height: 48px;
+     padding: 0 38px;
+     width: max-content;
+     background-color: $primary-font;
+     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+     color: $white;
+     border: none; 
+     text-transform: uppercase;
+     cursor: pointer;
+
+     &:active{
+        transform: scale(.9);
+        transition: .2s;
+        box-shadow: 0px 0px 4px 4px $primary-font;
+     }
+}
+.btn-secondary{
+     color: $black;
+     background-color: $base-bg;
+     border: 1px solid $primary-font;
+     text-transform: uppercase;
+}
+.line{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 1px;
+     opacity: 30%;
+     background-color: #000000;
+     box-shadow: 1px 2px 2px 0px rgb(0 0 0 / 25%);
+}
+.products{
+    padding: 70px $primary-padding 155px $primary-padding;
+
+    &_title{
+        font-size: $ui-xl;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    &_description{
+            margin-bottom: 85px;
+            text-align: center;
+        }
+    &_card{
+        margin-right: 40px;
+        img{
+            margin-bottom: 20px;
+        }
+        h4{
+            margin-bottom: 20px;
+            margin-left: 5px;
+            font-size: $ui-s;
+        }
+        button{
+            margin-left: 5px;
+        }
+        p{
+            width: 400px;
+            margin-left: 5px;
+        }
+    }
+    &_actions{
+            margin-top: 45px;
+            display: flex;
+            justify-content:left;
+
+            div{
+               width: 48px;
+               height: 48px;
+               display: flex;
+               margin-left: 155px;
+               align-items: center;
+               justify-content: center;
+               border: 1px solid #50382C;
+               filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+            }
+            
+    }
+}
+.advertisin{
+    margin-top: 170px;
+    height: 206px;
+    background-color: $secondary-bg;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &_title{
+        font-size: $ui-l;
+        padding-bottom: 10px;
+    }
+    &_line{
+         height: 136px;
+         width: 1px;
+         background: #50382C6B;
+         opacity: 42%;
+    }
+    &_sales{
+        text-align: center;
+    }
+}
+.landing{
+    display: flex;
+    position: relative;
+    height: 120vh;
+
+    &_false{
+        position: absolute;
+        width: 500px;
+        height: 750px;
+        background-color: $secondary-bg;
+        margin: 105px;
+        
+    }
+    img{
+       position: absolute;
+       margin-left: 140px;
+       margin-top: 73px;
+       
+       @media screen and (min-width: 1310px){
+         &:hover{
+        transform: rotate(90deg);
+        transition: 1s;
+       }
+       }
+      
+    }
+
+    &_text{
+        margin-left: 51%;
+        margin-top: 220px;
+    }
+
+    &_title{
+        font-size: $ui-l;
+        line-height: 80px;
+        width: 50%;
+    }
+
+    &_description{
+        display: flex;
+        width: 70%;
+        margin-top: 25px;
+        margin-bottom: 55px;
+    }
+}
+
+.reviews{
+    background-color: $secondary-bg;
+    padding: 30px;
+
+    &_title{
+        font-size: $ui-l;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    &_stars{
+        display: flex;
+        padding: 25px 0  0 25px;
+    }
+    &_cards{
+        display: flex;justify-content: center;
+        flex-wrap: wrap;
+    }
+    &_card{
+        background-color: $white;
+        border: none;
+        border-radius: 18px;
+        width: 450px;
+        margin: 10px;
+       
+    }
+    &_description{
+        padding: 15px 25px;
+    
+    }
+    &_reviewer{
+        display: flex;
+        align-items: center;
+        padding: 0 25px 25px;
+
+        img{
+            margin-right: 20px;
+        }
+        h5{
+            font-weight: 700;
+        }
+    }
+}
+.footer{
+    background-color: $base-bg;
+
+    &_columns{
+        padding: 40px 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;   
+    }
+
+    h3{
+        font-size: $ui-s;
+        padding-bottom: 15px;
+    }
+
+    p{
+        font-size: $ui-xs;
+        padding-bottom: 30px;
+        width: 60%;
+    }
+
+    img{
+        margin-right: 20px; 
+    }
+    
+    h4{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    
+    li{
+        font-size: $ui-xxs;
+        padding-bottom: 5px;
+    }
+
+    &_foot{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 20px;
+        
+        p{
+            font-size: $ui-xxs;
+            color: grey;
+        }
+    }
+}
+
+.line2{
+    position: absolute;
+    width: 88%;
+    height: 1px;
+    background-color: grey;
+    opacity: 50%;
+    margin-left: 6%;
+}
+
+@media only screen and(max-width:1310px){
+    .landing{
+       
+        &_false{
+            transform: scale(0.7);
+            margin: auto;
+        }
+        img{
+            transform: scale(0.7);
+            margin-left: 30px;
+            margin-top: -30px;
+        }
+        &_title{
+            font-size: $ui-s;
+            line-height: 45px;
+            margin-top: 0;
+        }
+        &_text{
+            margin-top: 150px;
+
+            p{
+                font-size: $ui-xxs;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:1100px){
+    .navigation_link{
+        display: none;
+    }
+    .home h2{
+        font-size: $ui-s;
+        margin-bottom: 25px;
+        
+    }
+}
+
+@media only screen and (max-width: 992px) {
+  
+ .home{
+    p{
+        line-height: 30px;
+    }
+ }
+
+ .home_logo{
+        transform: scale(.7);
+    }
+  
+ .about-us_item{
+
+       p{
+        font-size: $ui-xxs;
+       }
+  
+       &:first-child img{
+            height: 410px;
+       }
+       &:last-child img{
+            height: 375px;
+       }
+  }
+  
+  .about-us_title{
+    font-size: $ui-l;
+  }
+  
+  .products_title{
+    font-size: $ui-l;
+  }
+
+  .products{
+    padding-bottom: 0;
+  }
+
+  .advertisin{
+     
+    &_title{
+        font-size: $ui-s;
+    }
+  }
+
+  .landing{
+
+    &_false{
+       display: none;
+    }
+
+    img{
+        transform: scale(.5);
+        margin-left: -80px;
+        margin-top: -100px;
+    }
+    &_text{
+        margin-left: 45%;
+        margin-top: 80px;
+    }
+    &_title{
+        font-size: $ui-xs;
+        line-height: 25px;
+        font-weight: 600;
+    }
+    &_description{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+  }
+  
+  .reviews{
+
+    &_title{
+        font-size: $ui-s;
+    }
+  }
+
+  .footer{
+    
+    &_advertisin{
+        width: 200px;
+
+        h3{
+            font-size: $ui-xs;font-weight: 600;
+        }
+
+        p{
+            font-size: $ui-xxs;
+        }
+    }
+    h4{
+        font-size: $ui-xs;
+        font-weight: 600;
+    }
+    
+    .line2{
+        margin-left: 10%;
+        width: 80%;
+    }
+  }
+}
+
+@media only screen and(max-width:720px) {
+    .header{
+        justify-content: center;
+    }
+    .navigation_actions{
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .home{
+        height: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &_content{
+            display: flex;
+            justify-content: 
+            center;
+            text-align: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 0 30px;
+            margin: 30px 0 0 ;
+
+            h2{
+                display: flex;
+                justify-content: center;
+            }
+
+            p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+        &_logo{
+            margin-top: -150px;
+            img{
+               transform: scale(.7);
+            }
+            
+        }
+      }
+      
+    .about-us{
+
+        padding: 20px;
+        &_content{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+          align-items: center;
+          text-align: center;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        &_item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        
+
+
+        img{
+            height:auto;
+            width: 350px;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+    }
+    
+    .products{
+        
+        &_items{
+            width: 350px;
+        }
+        &_actions{
+            justify-content: space-between;
+
+            div{
+               margin: 0;
+            }
+        }
+    }
+    .landing{
+        height: 250vh;
+        flex-direction: column;
+        &_cards{
+             img{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transform: scale(.7);
+            margin: 0;
+            padding: 0;
+        }
+        }
+        &_text{
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &_title{
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 0;
+            text-align: center;
+
+        }
+        &_description{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+       
+    }
+    .reviews{
+
+        &_card{
+            overflow: hidden;
+        }
+    }
+    .footer{
+
+        &_columns{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+        &_advertisin{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &_social{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            
+        }
+        &_menu{
+            margin-bottom: 20px;
+        }
+        &_products{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media only screen and(max-width:556px) {
+
+    .products{
+         margin: 0 auto;
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+    }
+    .landing{
+        &_cards{
+            img{
+                margin: -70px;
+                padding: 0;
+            }
+        }
+    }
+    
+}
+@media only screen and(max-width:360px){
+    
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/animate.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body> 
+   <main class="root">
+    <header class="header">
+        <p class="header_title">Coffee</p>
+        <nav class="navigation">
+          <ul>
+            <li class="navigation_link">
+                <a href="#home">Home</a>
+            </li>
+            <li class="navigation_link">
+                <a href="#products">Products</a>
+            </li>
+            <li class="navigation_link">
+                <a href="#landing">Landing</a>
+            </li>
+            <li class="navigation_link">
+                <a href="#about-us">About us</a>
+            </li>
+          </ul>
+
+          <div class="navigation_actions">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="dropdown"><button type="button" class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+            <div class="dropdown_content" id="dropcont">
+              <a href="#home">Home</a>
+              <a href="#products">Products</a>
+              <a href="#landing">Landing</a>
+              <a href="#about-us">About us</a>
+            </div>
+          </div>
+          </div>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+      <div class="home_content">
+
+      <h2>We have your coffee!</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Proin sed mauris vel dui feugiat tempus. 
+        Suspendisse in arcu a dui pretium viverra.
+        Donec sit amet aliquam tellus.</p>
+      </div>
+      <div class="home_logo">
+        <img src="./images/home_logo.png" alt="">
+      </div>
+      <div class="line"></div>
+    </section>
+
+    <section id="about-us" class="about-us">
+        <h2 class="about-us_title">about us</h2>
+        <div class="about-us_content">
+            <div class="about-us_item wow fadeInLeftBig">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Proin sed mauris vel dui feugiat tempus.</p>
+            <button class="btn">buy now</button>
+            <img src="./images/about-us-1.png" alt="">
+         </div>
+        <div class="about-us_item wow fadeInRightBig">
+            <img src="./images/about-us-2.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin sed mauris vel dui feugiat tempus. Suspendisse
+                 in arcu a dui pretium viverra.Donec sit amet aliquam
+                 tellus.Lorem ipsum dolor sit amet, consectetur adipiscing 
+                 elit.Proin sed mauris vel dui feugiat tempus. Suspendisse
+                 in arcu a dui pretium viverra.Donec sit amet aliquam
+                 tellus.</p>
+            <button class="btn btn-secondary">read more</button>
+          </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+      <h2 class="products_title">Products</h2>
+      <p class="products_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="products_items">
+        <div class="products_card">
+          <img src="./images/products-1.png" alt="">
+          <h4>ceramic mugs</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="products_actions">
+            <button class="btn">buy now</button>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="products_card">
+          <img src="./images/products-2.png" alt="">
+          <h4>ceramic mug</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="products_actions">
+            <button class="btn">buy now</button>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="products_card">
+          <img src="./images/products-3.png" alt="">
+          <h4>coffee beans</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="products_actions">
+            <button class="btn">buy now</button>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="products_card">
+          <img src="./images/products-1.png" alt="">
+          <h4>some other item</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="products_actions">
+            <button class="btn">buy now</button>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="products_card">
+          <img src="./images/products-2.png" alt="">
+          <h4>last item</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div class="products_actions">
+            <button class="btn">buy now</button>
+            <div>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="advertisin">
+      <h2 class="advertisin_title">Organic Products</h2>
+      <div class="advertisin_line"></div>
+      <div class="advertisin_sales">
+        <h2 class="advertisin_title">1 Million+</h2>
+        <p class="advertisin_description">sales through-out the world</p>
+      </div>
+    </section>
+
+    <section class="landing" id="landing">
+      <div class="landing_cards">
+        <div class="landing_false"></div>
+        <img src="./images/landing.png" alt="image">
+      </div>
+      <div class="landing_text">
+        <h2 class="landing_title">We give you the best taste . . .</h2>
+        <p class="landing_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin sed mauris vel dui feugiat tempus. Suspendisse
+           in arcu a dui pretium viverra.Donec sit amet aliquam
+           tellus.Lorem ipsum dolor sit amet, consectetur adipiscing 
+           elit.Proin sed mauris vel dui feugiat tempus. Suspendisse
+           in arcu a dui pretium viverra.Donec sit amet aliquam
+           tellus.</p>
+           <button class="btn ">buy now</button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2 class="reviews_title">What our costumers are saying</h2>
+      </div>
+      <div class="reviews_cards">
+      <div class="reviews_card">
+        <div class="reviews_stars">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        </div>
+        <p class="reviews_description">There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more.</p>
+        <div class="reviews_reviewer">
+        <img src="./images/reviewer-1.png" alt="">
+        <h5>Serhiy Hajh</h5>
+        </div>
+      </div>
+      <div class="reviews_card">
+        <div class="reviews_stars">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        </div>
+        <p class="reviews_description">There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more.</p>
+        <div class="reviews_reviewer">
+        <img src="./images/reviewer-2.png" alt="">
+        <h5>Anyt Hikh</h5>
+        </div>
+      </div>
+      <div class="reviews_card">
+        <div class="reviews_stars">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        <img src="./images/star.png" alt="">
+        </div>
+        <p class="reviews_description">There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more.</p>
+        <div class="reviews_reviewer">
+        <img src="./images/reviewer-3.png" alt="">
+        <h5>Dfhgy Uhbj</h5>
+        </div>
+      </div>    
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="footer_columns">
+        <div class="footer_advertisin">
+          <h3 class="title">Coffee</h3>
+          <p class="description">Lorem ipsum dolor, sit consectetur adipisicing elit.
+          </p>
+        
+          <div class="footer_social"> <a href="#"><img src="./images/lincedin.png" alt="link"></a>
+          <a href="#"><img src="./images/twitter.png" alt="link"></a>
+          </div>
+        </div>
+          <div class="footer_menu">
+            <h4>Menu</h4>
+            <ul>
+              <li>Home</li>
+              <li>Products</li>
+              <li>landing</li>
+              <li>About us</li>
+            </ul>
+          </div>
+          <div class="footer_products">
+            <h4>products</h4>
+            <ul>
+              <li>coffee</li>
+              <li>Chocolate</li>
+              <li>Paper cups</li>
+              <li>mugs</li>
+            </ul>
+          </div>
+          <div class="footer_about-us">
+            <h4>about us</h4>
+            <ul>
+              <li>Who are you?</li>
+              <li>Contact us</li>
+              <li>Help</li>
+            </ul>
+          </div>
+      </div>
+      <div class="line2"></div>
+        <div class="footer_foot">
+          <p>Copyright © 2021 Coffee - All Rights Reserved</p>
+        </div>
+    </footer>
+  </main>
+
+
+  <script src="./scripts/wow.js"></script>
+
+  <script type="text/javascript" src="./slick/slick.js"></script>
+  
+  <script>
+    new WOW().init();
+
+    $('.products_items').slick({
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1350,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ]
+  });
+  
+  $('.reviews_cards').slic({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  speed: 900,
+  autoplay: true,
+  autoplaySpeed: 4000,
+
+  responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          autoplay: false,
+          autoplaySpeed: 0
+        }
+      }
+    ]
+  });
+
+
+
+  </script>
+
+
+</body>
+</html>
