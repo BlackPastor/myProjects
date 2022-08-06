@@ -771,9 +771,12 @@ body{
             margin-bottom: 20px;
         }
     }
+    .root{
+        overflow: hidden;
+    }
 }
 @media only screen and(max-width:556px) {
-
+    
     .home{
         &_logo{
             img{
@@ -799,8 +802,9 @@ body{
     .advertisin{
         padding: 10px;
     }
-    .root{
-        overflow: hidden;
+    
+    .header{
+        position: fixed;
     }
 }
 @media only screen and(max-width:360px) {
