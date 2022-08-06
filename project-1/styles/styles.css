@@ -9,7 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .root {
+  max-width: 100%;
   padding-top: 55px;
   background-color: #e9e7ea;
 }
@@ -738,11 +744,12 @@ html {
   }
 
   .landing {
-    height: 250vh;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 50px;
   }
   .landing_cards img {
     position: relative;
@@ -755,8 +762,13 @@ html {
             flex-direction: column;
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
-    margin: 0;
-    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
   }
   .landing_text {
     position: relative;
@@ -840,6 +852,11 @@ html {
   }
 }
 @media only screen and (max-width: 556px) {
+  .home_logo img {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+
   .products {
     margin: 0 auto;
     padding: 0;
@@ -853,10 +870,42 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 
-  .landing_cards img {
+  .landing_cards {
     margin: -70px;
-    padding: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+
+  .advertisin {
+    padding: 10px;
+  }
+
+  .root {
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .navigation ul {
+    margin: 0;
+  }
+
+  .header {
+    position: fixed;
+  }
+
+  .shopping {
+    margin-left: 100px;
+  }
+
+  .dropdown_content {
+    right: 65px;
+  }
+
+  .products_card {
+    overflow: hidden;
   }
 }

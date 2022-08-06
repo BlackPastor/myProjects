@@ -29,10 +29,14 @@ $transition: .4s;
 
 html{
     scroll-behavior: smooth;
+    
 }
 
+body{
+    box-sizing: border-box;
+}
 .root{
-    
+    max-width: 100%;
     padding-top: 55px;  
     background-color: $base-bg;
 }
@@ -691,16 +695,19 @@ html{
         }
     }
     .landing{
-        height: 250vh;
+        height: 100%;
         flex-direction: column;
+        margin-bottom: 50px;
         &_cards{
              img{
             position: relative;
             display: flex;
             flex-direction: column;
             transform: scale(.7);
-            margin: 0;
-            padding: 0;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+           
         }
         }
         &_text{
@@ -767,23 +774,63 @@ html{
 }
 @media only screen and(max-width:556px) {
 
+    .home{
+        &_logo{
+            img{
+                transform: scale(.7);
+            }
+        }
+    }
+
     .products{
          margin: 0 auto;
          padding: 0;
          display: flex;
          flex-direction: column;
          align-items: center;
+         transform: scale(.9);
     }
     .landing{
         &_cards{
-            img{
-                margin: -70px;
-                padding: 0;
-            }
+            margin: -70px;
+            transform: scale(.9);
         }
     }
-    
+    .advertisin{
+        padding: 10px;
+    }
+    .root{
+        overflow: hidden;
+    }
 }
-@media only screen and(max-width:360px){
+@media only screen and(max-width:360px) {
     
+    
+    .navigation{
+        ul{
+            margin: 0;
+        }
+        
+    }
+    .header{
+
+        position: fixed;
+    }
+    
+    .shopping{
+        margin-left: 100px;
+    }
+
+    .dropdown{
+        
+        &_content{
+            right: 65px;
+        }
+
+    }
+    .products{
+        &_card{
+            overflow: hidden;
+        }
+    }
 }
